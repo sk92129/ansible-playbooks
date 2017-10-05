@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: localhost
+  become: yes
+  become_user: root
+  tasks:
+   - name: install nginx
+     apt:
+       name: nginx
+       state: installed
+       update_cache: true
